@@ -3,7 +3,7 @@ import { ScrollView, Text, StyleSheet } from "react-native-web";
 function MetaList(props) {
     return (
         <ScrollView>
-            {props.array.map((meta, index) => <Text style={styles.item} key={index}>{meta}</Text>)}
+            {props.array.map((meta) => <Text  key={meta.id} style={styles.item}>{meta.texto} </Text>)}
         </ScrollView>
     )
 }

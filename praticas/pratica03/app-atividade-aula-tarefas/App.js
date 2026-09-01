@@ -6,8 +6,15 @@ export default function App() {
   const [metas, setMetas] = useState([]);
 
 function adicioarMetaHandler(inputMeta) {
-        setMetas([...metas, inputMeta]);
+  const novaMeta= {id: Math.random().toString(), texto: inputMeta}
+        setMetas([...metas, novaMeta]);
     }
+
+function deletarHandler(inputMeta){
+  console.log(id);
+  const novasMetas = metas.filter(meta => meta.id !== id);
+  setMetas(novasMetas)
+}
 
   return (
     <View style={styles.mainContainer}>
